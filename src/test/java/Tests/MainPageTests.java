@@ -1,21 +1,26 @@
 package Tests;
 
 import Pages.StartPage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.awt.*;
+
 public class MainPageTests extends BaseTest {
 
-
-    private StartPage startPage;
     private String RANDOMWORD="word";
 
-
     @Test
+    public void checkIfItemAddedToCart() {
 
-    public void CheckIfItemAddedToCart() {
-        startPage.EnterTheRandomWordOnTheSearchField(RANDOMWORD);
-        Assert.assertTrue(startPage.GetTextWithTitle(RANDOMWORD));
+        StartPage startPage = new StartPage(driver);
+        startPage.enterTheRandomWordOnTheSearchField(RANDOMWORD);
+        //String sometext=startPage.getTextWithTitle();
+        String pageTitle=driver.getTitle();
+        Assert.assertTrue(pageTitle.contains(RANDOMWORD));
     }
 
 }

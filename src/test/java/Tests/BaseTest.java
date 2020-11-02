@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
-    private WebDriver driver;
+    protected WebDriver driver;
     private static final String GOOGLE_URL = "https://www.google.com";
 
 
@@ -27,9 +27,11 @@ public class BaseTest {
 
     }
 
+
     @AfterMethod
     public void tearDown() {
         driver.close();
     }
+
 
 }

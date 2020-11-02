@@ -1,14 +1,14 @@
 package Pages;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 
 public class StartPage extends BasePage1 {
 
-    @FindBy(xpath = "//div[@class='a4bIc']")
+    @FindBy(xpath ="//input[@class='gLFyf gsfi']")
     private WebElement searchField;
 
     @FindBy(xpath = "//title")
@@ -16,14 +16,14 @@ public class StartPage extends BasePage1 {
 
     public StartPage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(driver, this);
     }
 
-    public StartPage EnterTheRandomWordOnTheSearchField(String randomWord) {
-        searchField.sendKeys(randomWord, Keys.ENTER);
+    public StartPage enterTheRandomWordOnTheSearchField(String randomWord) {
+        implicitWait(10);
+        searchField.sendKeys(randomWord);
+        searchField.submit();
+
         return this;
-    }
-
-    public boolean GetTextWithTitle(String someWord){
-       return titleHead.getText().contains(someWord);
     }
 }

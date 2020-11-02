@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BasePage1 {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     public BasePage1(WebDriver driver) {
         this.driver = driver;
