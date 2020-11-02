@@ -1,5 +1,5 @@
 
-package pagefactory.tests;
+package Tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,7 +23,7 @@ public class BaseTest {
     public void testsSetUp() {
         driver =new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.google.com");
+        driver.get(GOOGLE_URL);
 
     }
 

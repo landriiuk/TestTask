@@ -22,8 +22,8 @@ public class StartPage extends BasePage1 {
         searchField.sendKeys(randomWord, Keys.ENTER);
         return this;
     }
-    public StartPage GetTextWithTitle(){
-        titleHead.getText();
-        return  this;
+
+    public boolean GetTextWithTitle(String someWord){
+       return titleHead.getText().contains(someWord);
     }
 }

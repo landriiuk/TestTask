@@ -23,12 +23,7 @@ public class BasePage1 {
         driver.manage().timeouts().implicitlyWait(timeToWait, TimeUnit.SECONDS);
     }
 
-    public void waitForPageLoadComplete(long timeToWait) {
-        new WebDriverWait(driver, timeToWait).until(
-                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
-    }
-
-    public void waitVisibilityOfAddToCartPopup(long timeToWait, WebElement element) {
+    public void waitExplicit(long timeToWait, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
