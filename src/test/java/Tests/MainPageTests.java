@@ -18,9 +18,10 @@ public class MainPageTests extends BaseTest {
 
         StartPage startPage = new StartPage(driver);
         startPage.enterTheRandomWordOnTheSearchField(RANDOMWORD);
-        //String sometext=startPage.getTextWithTitle();
         String pageTitle=driver.getTitle();
         Assert.assertTrue(pageTitle.contains(RANDOMWORD));
+
+
     }
 
 }

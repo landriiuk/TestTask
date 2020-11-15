@@ -1,6 +1,5 @@
 
 package Tests;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -24,6 +23,7 @@ public class BaseTest {
         driver =new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(GOOGLE_URL);
+
 
     }
 
