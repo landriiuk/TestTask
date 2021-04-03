@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeTest;
 public class BaseTest {
 
     protected WebDriver driver;
+    
     private static final String GOOGLE_URL = "https://www.google.com";
-
 
     @BeforeTest
     public void profileSetUp() {
