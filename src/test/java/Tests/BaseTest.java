@@ -23,10 +23,7 @@ public class BaseTest {
         driver =new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(GOOGLE_URL);
-
-
     }
-
 
     @AfterMethod
     public void tearDown() {
