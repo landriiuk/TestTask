@@ -20,8 +20,6 @@ public class MainPageTests extends BaseTest {
         startPage.enterTheRandomWordOnTheSearchField(RANDOMWORD);
         String pageTitle=driver.getTitle();
         Assert.assertTrue(pageTitle.contains(RANDOMWORD));
-
-
     }
 
 }

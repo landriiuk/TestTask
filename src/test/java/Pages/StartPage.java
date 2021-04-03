@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class StartPage extends BasePage {
     WebDriver driver;
+    
     @FindBy(xpath ="//input[@class='gLFyf gsfi']")
     private WebElement searchField;
 
@@ -29,6 +30,7 @@ public class StartPage extends BasePage {
 
         return this;
     }
+
     public StartPage someMethod(){
         ArrayList<Integer> some=new ArrayList<>();
         for (int a:some
@@ -40,7 +42,5 @@ public class StartPage extends BasePage {
         element.click();
         element.getText();
         return  this;
-
-
     }
 }
